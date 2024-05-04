@@ -24,7 +24,7 @@ from torchvision.transforms import functional as F
 # Load the model
 model = torch.hub.load('ultralytics/yolov8', 'yolov8_nano')
 model = model.autoshape()  # for autoshaping of PIL/cv2/np inputs and NMS
-model.load_state_dict(torch.load('path_to_your_weights_file'))
+model.load_state_dict(torch.load('best_yolov8nano.pt'))
 model.eval()
 
 # Create a file uploader widget
